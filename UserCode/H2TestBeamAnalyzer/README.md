@@ -1,4 +1,4 @@
-Gateau do chocolat!
+Gateau au chocolat!
 
 # Test beam code instructions 
 
