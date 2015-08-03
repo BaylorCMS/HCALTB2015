@@ -1,5 +1,3 @@
-Gateau au chocolat!
-
 # Test beam code instructions 
 
 ## Setup the code
@@ -9,9 +7,9 @@ This is meant for machines wich access to CMSSW (e.g. lxplus)
 ```
 cmsrel CMSSW_7_5_0
 cd CMSSW_7_5_0/src
-git init
+# DO NOT DO cmsenv !!!
 ## use the ssh repo link if you are going to make commits 
-git remote add origin https://github.com/BaylorCMS/HCALTB2015
+git clone https://github.com/BaylorCMS/HCALTB2015 .
 git pull origin master
 ```
 Now you should have all the relevant code.
@@ -20,10 +18,13 @@ If you want to bring your checkout up to date with the main repo, just repeat th
 git pull origin master
 ```
 
+**DO NOT do cmsenv if you want to pull or push to/from the central repository. For reasons unknown to use, sourcing CMSSW breaks git**. If you know why this happens please let us know...
+
 ## Instructions on how to use the code
 
 First make sure to compile
 ```
+cd CMSSW_7_5_0/src
 scram b
 cmsenv
 ```
