@@ -9,21 +9,13 @@ cmsrel CMSSW_7_5_0
 cd CMSSW_7_5_0/src
 git init
 ## use the ssh repo link if you are going to make commits 
-git remote add origin https://github.com/BaylorCMS/cmssw.git
-git config core.sparsecheckout true
-echo "DataFormats/HcalDigi/" > .git/info/sparse-checkout
-echo "EventFilter/HcalRawToDigi/" >> .git/info/sparse-checkout
-echo "RecoTBCalo/HcalTBObjectUnpacker/" >> .git/info/sparse-checkout
-echo "UserCode/" >> .git/info/sparse-checkout
-## uncomment branch you are interested in
-#git pull origin HcalTestBeam
-git pull origin HcalTestBeamQIE11
+git remote add origin https://github.com/BaylorCMS/HCALTB2015
+git pull origin master
 ```
-
+Now you should have all the relevant code.
 If you want to bring your checkout up to date with the main repo, just repeat the last step
 ```
-#git pull origin HcalTestBeam
-git pull origin HcalTestBeamQIE11
+git pull origin master
 ```
 
 ## Instructions on how to use the code
